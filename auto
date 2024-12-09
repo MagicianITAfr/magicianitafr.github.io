@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrizione Auto - Modello XYZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        ul {
+            list-style-type: square;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Automobile - Modello XYZ</h1>
+
+    <img src="auto.jpg" alt="Immagine dell'auto Modello XYZ" style="width: 100%; max-width: 600px;">
+
+    <h2>Prezzi per Modello e Alimentazione</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Modello</th>
+                <th>Benzina</th>
+                <th>Diesel</th>
+                <th>Elettrico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Base</td>
+                <td>€20,000</td>
+                <td>€22,000</td>
+                <td>€25,000</td>
+            </tr>
+            <tr>
+                <td>Sport</td>
+                <td>€25,000</td>
+                <td>€27,000</td>
+                <td>€30,000</td>
+            </tr>
+            <tr>
+                <td>Luxury</td>
+                <td>€30,000</td>
+                <td>€33,000</td>
+                <td>€35,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Optional Disponibili</h2>
+    <ul>
+        <li>Sistema di navigazione satellitare</li>
+        <li>Sedili riscaldati in pelle</li>
+        <li>Sistema audio premium</li>
+        <li>Telecamera posteriore</li>
+        <li>Tetto panoramico</li>
+    </ul>
+
+    <h2>Punti di Forza</h2>
+    <p>
+        Il Modello XYZ si distingue per il design moderno, l'eccezionale efficienza dei consumi e le 
+        avanzate tecnologie di sicurezza. Con una gamma di motorizzazioni che include opzioni benzina, 
+        diesel ed elettriche, si adatta a ogni esigenza. È un'auto ideale per chi cerca comfort, prestazioni 
+        e affidabilità.
+    </p>
+
+    <h2>Link a una Concessionaria</h2>
+    <p>Visita il sito della <a href="https://www.concessionariaauto.it" target="_blank">Concessionaria Auto</a> per maggiori informazioni.</p>
+
+    <h2>Modulo di Contatto</h2>
+    <form action="" method="post">
+        <div>
+            <label for="nomeConcessionaria">Nome della Concessionaria visitata:</label><br>
+            <input type="text" id="nomeConcessionaria" name="nomeConcessionaria" required>
+        </div>
+        <div>
+            <input type="checkbox" id="acconsento" name="acconsento" required>
+            <label for="acconsento">Acconsento al trattamento dei dati personali</label>
+        </div>
+        <div>
+            <label for="modelloInteresse">Modello di interesse:</label><br>
+            <select id="modelloInteresse" name="modelloInteresse" required>
+                <option value="base">Base</option>
+                <option value="sport">Sport</option>
+                <option value="luxury">Luxury</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Invia</button>
+        </div>
+    </form>
+</body>
+</html>
