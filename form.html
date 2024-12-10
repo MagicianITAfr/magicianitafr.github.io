@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fafafa;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        ::selection{
+            background-color: #f395ff25;
+        }
+
+        *{
+            color: #fafafa;
+            margin-bottom: 1rem;
+            font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+        }
+
+        form{
+            position: absolute;
+            background-color: #262626;
+            padding: 1.5rem;
+            border-radius: .75rem;
+            width: 20rem;
+            padding-left: 2.5rem;      
+            padding-right: 2.5rem;      
+            padding-bottom: .75rem;
+            left: calc(50% - (20rem / 2));
+        }
+
+        input{
+            transition: all 250ms;
+            background-color: #3c3c3c;
+            color: #acacac;
+            border: none;
+            outline: none;
+            padding: 0.75rem;
+            margin-top: 0.25rem;
+            border-radius: 0.25rem;
+        }
+        }
+
+        input:hover{
+            background-color: #4b4b4b;
+        }
+
+        select{
+            background-color: #3c3c3c;
+            color: #acacac;
+            border: none;
+            outline: none;
+            padding: 0.25rem;
+            border-radius: 0.125rem;
+            margin-top: 0.25rem;
+        }
+
+        textarea{
+            position: relative;
+            background-color: #1f1f1f;
+            outline: none;
+            border: none;
+            border-radius: .25rem;
+            margin-top: .5rem;
+            padding: .75rem;
+            resize: vertical;
+            color: #acacac;
+        }
+
+        .submit{
+            position: relative;
+            padding: .5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: #6e6dac;
+            color: #fff;
+        }
+    </style>
+</head>
+<body bgcolor="#1c1c1c">
+    <form action="">
+        <h2>Form di registrazione</h2>
+        <label for="Nome">Nome</label>
+        <br>
+        <input type="text" value="Nome">
+        <br>
+        <label for="Cognome">Cognome</label>
+        <br>
+        <input type="text" value="Cognome">
+        <br>
+        <label>Data di nascita</label>
+        <label for="Mese"></label>
+        <br>
+        <select name="giorno">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+        <select name="mese" id="">
+            <option value="Mese">Mese</option>
+            <option value="Gen">Gennaio</option>
+            <option value="Feb">Febbraio</option>
+            <option value="Mar">Marzo</option>
+            <option value="Apr">Aprile</option>
+            <option value="Mag">Maggio</option>
+            <option value="Giu">Giugno</option>
+            <option value="Lu">Luglio</option>
+            <option value="Ago">Agosto</option>
+            <option value="Set">Settembre</option>
+            <option value="Ott">Ottobre</option>
+            <option value="Nov">Novembre</option>
+            <option value="Dic">Dicembre</option>
+        </select>
+        <select name="anno">
+            <option value="Anno">Anno</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+        <br>
+        <label for="E-Mail">E-Mail</label>
+        <br>
+        <input type="text" value="E-Mail">
+        <br>
+        <label for="Password">Password</label>
+        <br>
+        <input type="password">
+        <br>
+        <label for="Rehione">Regione</label>
+        <br>
+        <select name="regione">
+            <option value="Regione">Regione</option>
+            <option value="Ab">Abruzzo</option>
+            <option value="Ba">Basilicata</option>
+            <option value="Cal">Calabria</option>
+            <option value="Ca">Campania</option>
+            <option value="Em">Emilia-Romagna</option>
+            <option value="Fr">Friuli-Venezia</option>
+            <option value="La">Lazio</option>
+            <option value="Li">Liguria</option>
+            <option value="Lo">Lombardia</option>
+            <option value="Ma">Marche</option>
+            <option value="Mo">Molise</option>
+            <option value="Pi">Piemonte</option>
+            <option value="Pu">Puglia</option>
+            <option value="Sa">Sardegna</option>
+            <option value="Si">Sicilia</option>
+            <option value="To">Toscana</option>
+            <option value="Tr">Trentino-Alto Adige</option>
+            <option value="Um">Umbria</option>
+            <option value="Va">Valle d'Aosta</option>
+            <option value="Ve">Veneto</option>
+        </select>
+        <br>
+        <label for="Genere">Genere</label>
+        <br>
+        <input type="radio" name="genere">
+        <label for="Maschio">Maschio</label>
+        <input type="radio" name="genere">
+        <label for="Femmina">Femmina</label>
+        <br>
+        <label for="Privacy">Privacy</label>
+        <br>
+        <input type="checkbox">
+        <label for="Acconsento">Acconsento</label>
+        <br>
+        <label for="Note">Note</label>
+        <textarea rows="5" cols="40"></textarea>
+        <input type="submit" class="submit">
+    </form>
+</body>
+</html>
