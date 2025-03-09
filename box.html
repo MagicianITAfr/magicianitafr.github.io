@@ -3,7 +3,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout con Box Flottanti</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .header {
+            width: 50%;
+            height: 80px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+        .container {
+            width: 50%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .left-box, .right-box {
+            width: 10%;
+            height: 150px;
+            border: 2px solid black;
+            float: left;
+        }
+        .left-box {
+            background-color: lightblue;
+        }
+        .right-box {
+            background-color: purple;
+            float: right;
+        }
+        .main-box {
+            width: 75%;
+            height: 150px;
+            background-color: steelblue;
+            border: 2px solid black;
+            float: left;
+            margin: 0 10px;
+        }
+        .footer {
+            width: 50%;
+            height: 50px;
+            background-color: limegreen;
+            border: 2px solid orange;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="header"></div>
