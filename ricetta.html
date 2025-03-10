@@ -1,1 +1,77 @@
-
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricetta: Pasta alla Carbonara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pasta alla Carbonara</h1>
+    <img src="carbonara.jpg" alt="Pasta alla Carbonara" width="400">
+    
+    <table>
+        <tr>
+            <th>Difficoltà</th>
+            <th>Costo</th>
+            <th>Tempo di realizzazione</th>
+        </tr>
+        <tr>
+            <td>Media</td>
+            <td>Basso</td>
+            <td>20 minuti</td>
+        </tr>
+    </table>
+    
+    <h2>Ingredienti</h2>
+    <ul>
+        <li>200g di spaghetti</li>
+        <li>100g di guanciale</li>
+        <li>2 uova</li>
+        <li>50g di pecorino romano</li>
+        <li>Sale e pepe q.b.</li>
+    </ul>
+    
+    <h2>Preparazione</h2>
+    <p>Taglia il guanciale a listarelle e fallo rosolare in una padella senza olio. Nel frattempo, sbatti le uova con il pecorino e un pizzico di pepe. Cuoci la pasta al dente e scolala direttamente nella padella con il guanciale. Togli dal fuoco e aggiungi il composto di uova e pecorino, mescolando rapidamente per ottenere una crema. Servi subito con altro pecorino e pepe.</p>
+    
+    <p><a href="https://www.giallozafferano.it/ricetta/Pasta-alla-carbonara.html" target="_blank">Ricetta originale</a></p>
+    
+    <h2>Lascia un commento</h2>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="checkbox" id="consenso" name="consenso" required>
+        <label for="consenso">Acconsento al trattamento dei dati</label><br><br>
+        
+        <label for="gradimento">Livello di gradimento:</label>
+        <select id="gradimento" name="gradimento">
+            <option value="1">1 - Pessimo</option>
+            <option value="2">2 - Discreto</option>
+            <option value="3">3 - Buono</option>
+            <option value="4">4 - Ottimo</option>
+            <option value="5">5 - Eccellente</option>
+        </select><br><br>
+        
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
