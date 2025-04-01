@@ -1,0 +1,82 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Box Flottanti</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .header {
+            width: 50%;
+            height: 80px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+        .container {
+            width: 50%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .left-box, .right-box {
+            width: 10%;
+            height: 150px;
+            border: 2px solid black;
+            float: left;
+        }
+        .left-box {
+            background-color: lightblue;
+        }
+        .right-box {
+            background-color: purple;
+            float: right;
+        }
+        .main-box {
+            width: 75%;
+            height: 150px;
+            background-color: steelblue;
+            border: 2px solid black;
+            float: left;
+            margin: 0 2.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer {
+            width: 50%;
+            height: 50px;
+            background-color: limegreen;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 90%;
+            height: 90%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="left-box"></div>
+        <div class="main-box">
+            <iframe 
+                src="https://www.youtube.com/embed/yfoY53QXEnI" 
+                title="Corso CSS per principianti" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="right-box"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
