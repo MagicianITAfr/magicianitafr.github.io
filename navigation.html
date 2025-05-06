@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Dropdown Simile WordPress</title>
+  <title>Menu Dropdown Aggiornato</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -11,7 +11,7 @@
     }
 
     .menu {
-      background-color: #f7f4e8; /* colore beige chiaro */
+      background-color: #f7f4e8; 
       display: flex;
       padding: 10px 20px;
     }
@@ -33,27 +33,35 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #2a1515; /* scuro */
-      min-width: 220px;
+      background-color: #2a1515; 
+      min-width: 240px;
       z-index: 1000;
-      padding: 10px;
+      padding: 10px 0;
     }
 
     .dropdown a {
       color: white;
       display: block;
       text-decoration: none;
-      margin-bottom: 8px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
     }
 
     .dropdown a:first-child {
       font-style: italic;
     }
 
+    .dropdown a:hover {
+      background-color: #1c0e0e;
+    }
+
+    .active {
+      background-color: #b34700; 
+    }
+
     .menu-item:hover .dropdown {
       display: block;
     }
-
   </style>
 </head>
 <body>
@@ -62,15 +70,26 @@
   <div class="menu-item">
     <a href="#" class="menu-link">Definizione di economia circolare</a>
     <div class="dropdown">
-      <a href="#">Definizione di economia circolare</a>
+      <a href="#" class="active"><em>Definizione di economia circolare</em></a>
       <a href="#">Iniziative Europee</a>
     </div>
   </div>
+
   <div class="menu-item">
     <a href="#" class="menu-link">Iniziative Europee</a>
+    <div class="dropdown">
+      <a href="#"><em>Iniziative Europee</em></a>
+      <a href="#">Iniziative Italiane</a>
+    </div>
   </div>
+
   <div class="menu-item">
     <a href="#" class="menu-link">Riciclaggio della lana (Prato)</a>
+    <div class="dropdown">
+      <a href="#"><em>Riciclaggio della lana (Prato)</em></a>
+      <a href="#">Vantaggi</a>
+      <a href="#">Svantaggi</a>
+    </div>
   </div>
 </nav>
 
