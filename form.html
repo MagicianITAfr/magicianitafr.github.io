@@ -1,164 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: #1c1c1c;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+    body {
+      background-color: #1c1c1c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        ::selection {
-            background-color: #f395ff25;
-        }
+    form {
+      background-color: #275692;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 22rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
 
-        form {
-            background-color: #275692;
-            padding: 2rem;
-            border-radius: 1rem;
-            width: 22rem;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-        }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      background-color: #3d3d3f;
+      color: #acacac;
+      border: none;
+      outline: none;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      transition: all 250ms;
+    }
 
-        input,
-        select,
-        textarea {
-            display: block;
-            width: 100%;
-            margin-top: 0.25rem;
-            margin-bottom: 1rem;
-            background-color: #3d3d3f;
-            color: #acacac;
-            border: none;
-            outline: none;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            transition: all 250ms;
-        }
+    input:hover,
+    select:hover,
+    textarea:hover {
+      background-color: #4b4b4b;
+    }
 
-        input:hover,
-        select:hover,
-        textarea:hover {
-            background-color: #4b4b4b;
-        }
+    .submit {
+      background-color: #6e6dac;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
 
-        .submit {
-            background-color: #6e6dac;
-            color: #fff;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
+    label {
+      font-weight: 500;
+    }
 
-        label {
-            font-weight: 500;
-        }
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+      margin-right: 0.5rem;
+    }
 
-        input[type="radio"],
-        input[type="checkbox"] {
-            display: inline-block;
-            width: auto;
-            margin-right: 0.5rem;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-    </style>
+    textarea {
+      resize: vertical;
+    }
+  </style>
 </head>
 <body>
-    <form action="">
-        <h2>Form di registrazione</h2>
-        <label for="Nome">Nome</label>
-        <input type="text" placeholder="Inserisci il tuo nome">
+  <form action="">
+    <h2>Form di registrazione</h2>
+    <label for="Nome">Nome</label>
+    <input type="text" placeholder="Inserisci il tuo nome">
 
-        <label for="Cognome">Cognome</label>
-        <input type="text" placeholder="Inserisci il tuo cognome">
+    <label for="Cognome">Cognome</label>
+    <input type="text" placeholder="Inserisci il tuo cognome">
 
-        <label>Data di nascita</label>
-        <select name="giorno">
-            <option value="">Giorno</option>
-            ${[...Array(31).keys()].map(i => `<option value="${i+1}">${i+1}</option>`).join('')}
-        </select>
-        <select name="mese">
-            <option value="">Mese</option>
-            <option value="Gen">Gennaio</option>
-            <option value="Feb">Febbraio</option>
-            <option value="Mar">Marzo</option>
-            <option value="Apr">Aprile</option>
-            <option value="Mag">Maggio</option>
-            <option value="Giu">Giugno</option>
-            <option value="Lug">Luglio</option>
-            <option value="Ago">Agosto</option>
-            <option value="Set">Settembre</option>
-            <option value="Ott">Ottobre</option>
-            <option value="Nov">Novembre</option>
-            <option value="Dic">Dicembre</option>
-        </select>
-        <select name="anno">
-            <option value="">Anno</option>
-            ${[...Array(16).keys()].map(i => `<option value="${2010+i}">${2010+i}</option>`).join('')}
-        </select>
+    <label>Data di nascita</label>
+    <select name="giorno">
+      <option value="">Giorno</option>
+      <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+      <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+      <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+      <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+      <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>
+    </select>
+    <select name="mese">
+      <option value="">Mese</option>
+      <option value="Gen">Gennaio</option>
+      <option value="Feb">Febbraio</option>
+      <option value="Mar">Marzo</option>
+      <option value="Apr">Aprile</option>
+      <option value="Mag">Maggio</option>
+      <option value="Giu">Giugno</option>
+      <option value="Lug">Luglio</option>
+      <option value="Ago">Agosto</option>
+      <option value="Set">Settembre</option>
+      <option value="Ott">Ottobre</option>
+      <option value="Nov">Novembre</option>
+      <option value="Dic">Dicembre</option>
+    </select>
+    <select name="anno">
+      <option value="">Anno</option>
+      <option>2000</option><option>2001</option><option>2002</option><option>2003</option>
+      <option>2004</option><option>2005</option><option>2006</option><option>2007</option>
+      <option>2008</option><option>2009</option><option>2010</option><option>2011</option>
+      <option>2012</option><option>2013</option><option>2014</option><option>2015</option>
+      <option>2016</option><option>2017</option><option>2018</option><option>2019</option>
+      <option>2020</option><option>2021</option><option>2022</option><option>2023</option>
+      <option>2024</option><option>2025</option>
+    </select>
 
-        <label for="email">E-Mail</label>
-        <input type="email" placeholder="Inserisci la tua email">
+    <label for="email">E-Mail</label>
+    <input type="email" placeholder="Inserisci la tua email">
 
-        <label for="Password">Password</label>
-        <input type="password" placeholder="********">
+    <label for="Password">Password</label>
+    <input type="password" placeholder="********">
 
-        <label for="Regione">Regione</label>
-        <select name="regione">
-            <option value="">Scegli una regione</option>
-            <option value="Ab">Abruzzo</option>
-            <option value="Ba">Basilicata</option>
-            <option value="Cal">Calabria</option>
-            <option value="Ca">Campania</option>
-            <option value="Em">Emilia-Romagna</option>
-            <option value="Fr">Friuli-Venezia</option>
-            <option value="La">Lazio</option>
-            <option value="Li">Liguria</option>
-            <option value="Lo">Lombardia</option>
-            <option value="Ma">Marche</option>
-            <option value="Mo">Molise</option>
-            <option value="Pi">Piemonte</option>
-            <option value="Pu">Puglia</option>
-            <option value="Sa">Sardegna</option>
-            <option value="Si">Sicilia</option>
-            <option value="To">Toscana</option>
-            <option value="Tr">Trentino-Alto Adige</option>
-            <option value="Um">Umbria</option>
-            <option value="Va">Valle d'Aosta</option>
-            <option value="Ve">Veneto</option>
-        </select>
+    <label for="Regione">Regione</label>
+    <select name="regione">
+      <option value="">Scegli una regione</option>
+      <option value="Ab">Abruzzo</option>
+      <option value="Ba">Basilicata</option>
+      <option value="Cal">Calabria</option>
+      <option value="Ca">Campania</option>
+      <option value="Em">Emilia-Romagna</option>
+      <option value="Fr">Friuli-Venezia</option>
+      <option value="La">Lazio</option>
+      <option value="Li">Liguria</option>
+      <option value="Lo">Lombardia</option>
+      <option value="Ma">Marche</option>
+      <option value="Mo">Molise</option>
+      <option value="Pi">Piemonte</option>
+      <option value="Pu">Puglia</option>
+      <option value="Sa">Sardegna</option>
+      <option value="Si">Sicilia</option>
+      <option value="To">Toscana</option>
+      <option value="Tr">Trentino-Alto Adige</option>
+      <option value="Um">Umbria</option>
+      <option value="Va">Valle d'Aosta</option>
+      <option value="Ve">Veneto</option>
+    </select>
 
-        <label for="Genere">Genere</label>
-        <input type="radio" name="genere" value="Maschio"><label>Maschio</label>
-        <input type="radio" name="genere" value="Femmina"><label>Femmina</label>
+    <label>Genere</label>
+    <input type="radio" name="genere" value="Maschio"><label>Maschio</label>
+    <input type="radio" name="genere" value="Femmina"><label>Femmina</label>
 
-        <br><br>
-        <input type="checkbox" id="privacy"><label for="privacy">Acconsento alla Privacy</label>
+    <br><br>
+    <input type="checkbox" id="privacy"><label for="privacy">Acconsento alla Privacy</label>
 
-        <label for="Note">Note</label>
-        <textarea rows="4" placeholder="Note aggiuntive..."></textarea>
+    <label for="Note">Note</label>
+    <textarea rows="4" placeholder="Note aggiuntive..."></textarea>
 
-        <input type="submit" class="submit" value="Invia">
-    </form>
+    <input type="submit" class="submit" value="Invia">
+  </form>
 </body>
 </html>
