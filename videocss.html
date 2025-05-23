@@ -1,82 +1,128 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video css</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .header {
-            width: 50%;
-            height: 15em;
-            background-color: orange;
-            border: 2px solid black;
-        }
-        .container {
-            width: 50%;
-            margin-top: 20px;
-            overflow: hidden;
-        }
-        .left-box, .right-box {
-            width: 10%;
-            height: 40em;
-            border: 2px solid black;
-            float: left;
-        }
-        .left-box {
-            background-color: lightblue;
-        }
-        .right-box {
-            background-color: purple;
-            float: right;
-        }
-        .main-box {
-            width: 75%;
-            height: 40em;
-            background-color: steelblue;
-            border: 2px solid black;
-            float: left;
-            margin: 0 2.5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .footer {
-            width: 50%;
-            height: 15em;
-            background-color: limegreen;
-            border: 2px solid black;
-            margin-top: 20px;
-        }
-        iframe {
-            width: 90%;
-            height: 90%;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+    }
+
+    .header, .footer {
+      width: 90%;
+      max-width: 1000px;
+      height: 200px;
+      border-radius: 10px;
+      border: 2px solid #333;
+      background: linear-gradient(135deg, #ffa726, #fb8c00);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .left-box, .right-box {
+      width: 10%;
+      min-width: 60px;
+      border-radius: 10px;
+      border: 2px solid #333;
+      height: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .left-box {
+      background-color: #4fc3f7;
+    }
+
+    .right-box {
+      background-color: #8e24aa;
+    }
+
+    .left-box:hover, .right-box:hover {
+      transform: scale(1.05);
+    }
+
+    .main-box {
+      flex: 1;
+      background-color: #4682b4;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    iframe {
+      width: 90%;
+      height: 90%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #66bb6a, #43a047);
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-box, .right-box {
+        width: 90%;
+        height: 100px;
+      }
+
+      .main-box {
+        height: 400px;
+        width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header"></div>
-    <div class="container">
-        <div class="left-box"></div>
-        <div class="main-box">
-            <iframe 
-                src="https://www.youtube.com/embed/yfoY53QXEnI" 
-                title="Corso CSS per principianti" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="right-box"></div>
+  <div class="header"></div>
+  <div class="container">
+    <div class="left-box"></div>
+    <div class="main-box">
+      <iframe 
+        src="https://www.youtube.com/embed/yfoY53QXEnI" 
+        title="Corso CSS per principianti" 
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="footer"></div>
+    <div class="right-box"></div>
+  </div>
+  <div class="footer"></div>
 </body>
 </html>
