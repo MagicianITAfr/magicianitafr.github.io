@@ -1,68 +1,113 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout con Box Flottanti</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .header {
-            width: 50%;
-            height: 80px;
-            background-color: orange;
-            border: 2px solid black;
-        }
-        .container {
-            width: 50%;
-            margin-top: 20px;
-            overflow: hidden;
-        }
-        .left-box, .right-box {
-            width: 10%;
-            height: 150px;
-            border: 2px solid black;
-            float: left;
-        }
-        .left-box {
-            background-color: lightblue;
-        }
-        .right-box {
-            background-color: purple;
-            float: right;
-        }
-        .main-box {
-            width: 75%;
-            height: 150px;
-            background-color: steelblue;
-            border: 2px solid black;
-            float: left;
-            margin: 0 10px;
-        }
-        .footer {
-            width: 50%;
-            height: 50px;
-            background-color: limegreen;
-            border: 2px solid orange;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout con Box Flottanti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .header, .footer {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .header {
+      height: 80px;
+      background: linear-gradient(to right, #ffa726, #fb8c00);
+      border: 2px solid #333;
+    }
+
+    .footer {
+      height: 50px;
+      background: linear-gradient(to right, #81c784, #43a047);
+      border: 2px solid #fb8c00;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .left-box, .right-box, .main-box {
+      border: 2px solid #333;
+      border-radius: 8px;
+      height: 150px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .left-box, .right-box {
+      width: 10%;
+      min-width: 60px;
+    }
+
+    .left-box {
+      background-color: #4fc3f7;
+    }
+
+    .right-box {
+      background-color: #8e24aa;
+    }
+
+    .main-box {
+      background-color: #4682b4;
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .left-box:hover,
+    .right-box:hover,
+    .main-box:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .left-box, .right-box, .main-box {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .main-box {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header"></div>
-    <div class="container">
-        <div class="left-box"></div>
-        <div class="main-box"></div>
-        <div class="right-box"></div>
-    </div>
-    <div class="footer"></div>
+  <div class="header"></div>
+  <div class="container">
+    <div class="left-box"></div>
+    <div class="main-box"></div>
+    <div class="right-box"></div>
+  </div>
+  <div class="footer"></div>
 </body>
 </html>
