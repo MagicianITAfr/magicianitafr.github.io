@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layout Moderno</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>box floattanti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -13,104 +13,95 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f0f2f5;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 20px 10px;
     }
 
     .header, .footer {
       width: 90%;
-      max-width: 800px;
-      text-align: center;
-      padding: 15px;
+      max-width: 1000px;
+      height: 200px;
       border-radius: 10px;
-      color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .header {
-      background: linear-gradient(to right, #f9a825, #f57c00);
-      font-size: 1.5rem;
-      font-weight: bold;
+      border: 2px solid #333;
+      background: linear-gradient(135deg, #ffa726, #fb8c00);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
 
     .footer {
-      background: linear-gradient(to right, #66bb6a, #388e3c);
+      background: linear-gradient(135deg, #66bb6a, #43a047);
       margin-top: 20px;
     }
 
     .container {
       width: 90%;
-      max-width: 800px;
+      max-width: 1000px;
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .left-box, .right-box, .main-box {
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      color: white;
-      transition: transform 0.3s;
-    }
-
-    .left-box:hover,
-    .right-box:hover,
-    .main-box:hover {
-      transform: translateY(-5px);
+      gap: 20px;
     }
 
     .left-box, .right-box {
-      width: 15%;
+      width: 10%;
       min-width: 60px;
-      text-align: center;
-      font-weight: bold;
+      border-radius: 10px;
+      border: 2px solid #333;
+      height: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
     .left-box {
-      background-color: #29b6f6;
+      background-color: #4fc3f7;
     }
 
     .right-box {
-      background-color: #ab47bc;
+      background-color: #8e24aa;
+    }
+
+    .left-box:hover, .right-box:hover {
+      transform: scale(1.05);
     }
 
     .main-box {
       flex: 1;
-      background-color: #42a5f5;
-      text-align: center;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #4682b4;
+      border: 2px solid #333;
+      border-radius: 10px;
+      height: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        align-items: center;
       }
 
-      .left-box, .right-box, .main-box {
+      .left-box, .right-box {
+        width: 90%;
+        height: 100px;
+      }
+
+      .main-box {
+        height: 400px;
         width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="header">Benvenuto nel Mio Layout</div>
-
+  <div class="header"></div>
   <div class="container">
-    <div class="left-box">Menu</div>
-    <div class="main-box">Contenuto Principale</div>
-    <div class="right-box">Extra</div>
+    <div class="left-box"></div>
+    <div class="main-box"></div>
+    <div class="right-box"></div>
   </div>
-
-  <div class="footer">© 2025 Tutti i diritti riservati</div>
+  <div class="footer"></div>
 </body>
 </html>
