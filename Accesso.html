@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Piattaforma di Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .log {
+            margin-top: 15px;
+            font-size: 0.9em;
+            max-height: 150px;
+            overflow-y: auto;
+            background: #f1f1f1;
+            padding: 10px;
+        }
+
+        .success { color: green; }
+        .fail { color: red; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Accedi</button>
+
+    <div class="log" id="log"></div>
+</div>
+
+<script
+    const USERNAME_CORRETTO = "admin";
+    const PASSWORD_CORRETTA = "1234";
+
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const data = new Date().toLocaleString();
+
+        let esito;
+
+        if (username === USERNAME_CORRETTO && password === PASSWORD_CORRETTA) {
+            esito = "SUCCESSO";
+            alert("Login effettuato con successo!");
+        } else {
+            esito = "FALLITO";
+            alert("Credenziali errate!");
+        }
+
+        salvaLog(data, username, esito);
+        mostraLog();
+    }
+
+    function salvaLog(data, username, esito) {
+        const logs = JSON.parse(localStorage.getItem("accessLogs")) || [];
+        logs.push({ data, username, esito });
+        localStorage.setItem("accessLogs", JSON.stringify(logs));
+    }
+
+    function mostraLog() {
+        const logs = JSON.parse(localStorage.getItem("accessLogs")) || [];
+        const logDiv = document.getElementById("log");
+        logDiv.innerHTML = "<strong>Log accessi:</strong><br>";
+
+        logs.slice().reverse().forEach(log => {
+            const classe = log.esito === "SUCCESSO" ? "success" : "fail";
+            logDiv.innerHTML += `
+                <div class="${classe}">
+                    [${log.data}] ${log.username} → ${log.esito}
+                </div>
+            `;
+        });
+  }
+    mostraLog();
+</script>
+
+</body>
+  </html>
